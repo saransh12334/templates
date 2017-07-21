@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script>
+
+$(document).ready(function(){
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+   
+  if (this.hash !== "") {
+
+    
+    event.preventDefault();
+
+    
+    var hash = this.hash;
+
+    
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      
+      window.location.hash = hash;
+      });
+    } 
+  });
+})
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+</script>
+<style>
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+  
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    
+    visibility: visible; 
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+  }
+.Jumbotron
+{
+background-color: #f4511e ;
+color:#fff;
+padding: 100px 25px;
+}
+.bg-1
+{
+  background-color: #f6f6f6;
+}
+.container-fluid
+{
+  padding: 60px 50px;
+}
+.logo {
+    font-size: 200px;
+}
+
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+
+.logo {
+    color: #f4511e;
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.panel {
+    border: 1px solid #f4511e; 
+    border-radius:0;
+    transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+.panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff;
+    color: #f4511e;
+}
+
+.panel-heading {
+    color: #fff ;
+    background-color: #f4511e;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+    background-color: #fff;
+}
+
+.panel-footer h3 {
+    font-size: 32px;
+}
+
+.panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+}
+
+</style>
+
+<title>Company</title>
+
+</head>
+<body>
+<div class ="Jumbotron text-center">
+<h1>Company</h1>
+<p>We Specialize in Company</p>
+<form class="form-inline">
+<div  class="input-group">
+<input type="email" class="form-control"  size="50" placeholder="Email Address" required>
+<div class="input-group-btn">
+<button type="button" class="btn btn-danger">Subscribe</button>
+</div>
+</div>
+</form>
+</div>
+<div class ="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+          <H2>ABOUT COMPANY PAGE</H2>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+          <br/>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <button type="button" class ="btn btn-default btn-lg">Get in Touch</button>
+</div>
+      <div class="col-sm-4">
+        <span class ="glyphicon glyphicon-signal logo slideanim"></span>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span> 
+    </div>
+    <div class="col-sm-8">
+        <h2>OUR VALUES </h2>
+        <h4><strong>Mission:</strong>Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+
+        <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid text-center">
+  <h2>Services</h2>
+  <h4>What we offer</h4>
+  <br>
+    <div class="row slideanim">
+          <div class="col-sm-4">
+          <span class="glyphicon glyphicon-off logo-small"></span>          
+          <h4>Power</h4>
+          <p>Learn More About it</p>
+          </div>
+  <br>
+          <div class="col-sm-4">
+          <span class="glyphicon glyphicon-heart logo-small"></span>     
+          <h4>LOVE</h4>
+          <p>Learn more About it</p>
+          </div>
+  <br>
+          <div class="col-sm-4">
+          <span class="glyphicon glyphicon-lock logo-small"></span>        
+          <H4>JOB DONE</H4>
+          <p> Lean More About it </p>
+          </div>
+  <br>
+          <div class="col-sm-4">
+          <span class="glyphicon glyphicon-leaf logo-small"></span>        
+          <h4>Green</h4>
+          <p>Learn More about it </p>
+          </div>
+  <br>
+          <div class="col-sm-4">
+          <span class="glyphicon glyphicon-certificate logo-small"></span> 
+          <h4>Certified</h4>
+          <p>Learn More about it</p>
+          </div>
+  <br>
+          <div class="col-sm-4">
+          <span class="glyphicon glyphicon-wrench logo-small"></span>     
+          <h4>Hard Work</h4>
+          <p>Learn More About it </p>
+          </div>
+      </div>
+</div>
+<div class="container-fluid text-center bg-1">
+  <div class="row">
+                    <div class="col-sm-4"> 
+                      <div class="thumbnail">
+                        <img src="paris.jpg" classs="img-circle" alt="paris" style="width: 50%;"> 
+                          <div class="caption">
+                            <p>Yes,we built Paris</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="thumbnail">
+                        <img src="newyork.jpg" class="img-circle" alt="new york" style ="width: 50%;"> 
+                          <div class= "caption">
+                            <p> Yes we build new york as well!</p>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="thumbnail">
+                        <img src="sanfran.jpg" class="img-circle" alt="san fran" style =" width: 50%;"> 
+                          <div class = "caption">
+                            <p> And yes how could we forget San Francisco </p>
+                          </div>
+                      </div>
+                    </div>
+  </div>
+</div>
+
+<h2 class="text-center">What our customers say</h2>
+<div id="myCarousel" class="carousel text-center" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+<div class="carousel-inner" role="listbox">
+    <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+    </div>
+    <div class="item">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+    </div>
+    <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+    </div>
+</div>
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  <div class="container-fluid text-center">
+      <h3>PRICING</h3>
+      <h4>Choose a payment plan that works for you</h4>
+    <div class="row slideanim">
+      
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class ="panel heading">
+            <h1>Basic</h1>
+          </div>
+            <div class="panel-body">
+              <p><strong>20</strong>Lorem</p>
+              <p><strong>15</strong>Ispum</p>
+              <p><strong>5</strong>Dolor</p>
+              <p><strong>2</strong>Sit</p>
+              <p><strong>Endless</strong>Amet</p>
+            </div>
+          <div class="panel-footer">
+            <h3>$19</h3>
+            <h4>per month</h4>
+            <button type="button" class ="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+   <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class ="panel heading">
+            <h1>Pro</h1>
+          </div>
+            <div class="panel-body">
+              <p><strong>20</strong>Lorem</p>
+              <p><strong>15</strong>Ispum</p>
+              <p><strong>5</strong>Dolor</p>
+              <p><strong>2</strong>Sit</p>
+              <p><strong>Endless</strong>Amet</p>
+            </div>
+          <div class="panel-footer">
+            <h3>$29</h3>
+            <h4>per month</h4>
+            <button type="button" class ="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+
+ <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class ="panel heading">
+            <h1>Premium</h1>
+          </div>
+            <div class="panel-body">
+              <p><strong>20</strong>Lorem</p>
+              <p><strong>15</strong>Ispum</p>
+              <p><strong>5</strong>Dolor</p>
+              <p><strong>2</strong>Sit</p>
+              <p><strong>Endless</strong>Amet</p>
+            </div>
+          <div class="panel-footer">
+            <h3>$49</h3>
+            <h4>per month</h4>
+            <button type="button" class ="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="container-fluid bg-1">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row slideanim">
+    <div class="col-sm-5">
+        
+
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span>
+        Delhi, India</p>
+        <p><span class="glyphicon glyphicon-phone"></span>
+        +00 1515151515</p>
+        <p><span class="glyphicon glyphicon-envelope"></span>
+        myemail@something.com</p>
+    
+    </div>
+
+    <div class="col-sm-7">
+      
+      <div class="row">
+        
+        <div class="col-sm-6 form-group">
+    
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+    
+        </div>
+
+        <div class="col-sm-6 form-group">
+    
+          <input class="form-control " id="email" name="email" placeholder="Email" type="email" required>
+    
+        </div>
+
+        <textarea class="form-control" id="Comments" placeholder="Comments" rows="5"></textarea><br>
+        
+        <div class="row">
+         
+          <div class="col-sm-12 form-group">
+    
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+    
+          </div>
+        
+        </div>
+
+      </div>
+    
+    </div>
+
+  </div>
+
+</body>
+</html
